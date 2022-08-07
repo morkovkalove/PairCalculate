@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Расчет парности</title>
+  <link rel="stylesheet" href="css/pair.css">
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <div class="wrapper">
+    <header id="header">
+      <div id="logo"><img src="img/logo_mm.svg" alt="MosMetro"></div>
+
+    </header>
+
+    <main class="main-menu">
+      <div class="subtitle">
+        <!-- <h1 class="subtitle_h1">Выберите вариант подсчета</h1> -->
+      </div>
+
+    <nav class="select_body">
+      <select id="select">
+        <option value="option">Выберите вариант/ Всё спрятать</option>
+        <option value="one">Парность частоты движения</option>
+        <option value="two">Парность частоты(к.вариант)</option>
+      </select>
+    </nav>
+
+    <main>
+      <div class="hide" id="one" hidden>
+        <div class="enter_datas">
+          <h2 class="value_name">Парность частоты движения</h2>
+          <input type="number" class="enter_child" id="one_child" placeholder="Макс.величина пассажиропотока" min="0">
+
+          <input type="number" class="enter_child" id="two_child" placeholder="Интервал движения для часа пик" min="0">
+
+          <input type="number" class="enter_child" id="third_child" placeholder="Время оборотного рейса осн.маршрута" min="0">
+
+          <!-- <input type="number" class="enter_child" id="four_child" placeholder="Интервал движения автобусов/мин." min="0"> -->
+
+          <button class="calculates" id="first_butt">Рассчитать</button>
+          <textarea name="result" id="textarea_first" cols="30" rows="10" class="result_datas"></textarea>
+          <button class="send_datas" id="clear_one">Очистить значения</button>
+        </div>
+      </div>
+
+      <div class="hide" id="two" hidden>
+        <div class="enter_datas">
+          <h2 class="value_name">Парнось частоты</h2>
+          <input type="number" class="enter_child" placeholder="Введите интервал.." id="simple_input" value="" min="0">
+          <button class="calculates" id="second_butt">Посчитать</button>
+          <textarea name="result" id="textarea_mini" cols="30" rows="10" class="result_datas"></textarea>
+          <button class="send_datas" id="clear_two">Очистить значения</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+<!-- <footer style="background-color: #F3F0F0;">
+  <div id="contacts">
+      <svg width="395" height="88" viewBox="0 0 395 88" fill="none">
+          <path class="contacts_V" d="M395 0H0V88H314.5L395 0Z"></path>
+      </svg>
+  </div>
+  <div id="contacts_info">
+  <img id="EDC_logo" src="img/logoEDC.svg" alt="">
+      <span id="contacts_mail">  </span>
+      <span id="contacts_feedback"> <a href="mailto: info-edc@mosmetro.ru?subject=Ресурс регистрации на рабочем месте">info-edc@mosmetro.ru</a> </span>
+  </div>
+  <div id="container_contacts">
+      <h1>Обратная связь</h1>
+      <h2><img id="fbClose" ></h2>
+      <input type="text" name="" id="" placeholder="Введите имя">
+      <input type="email" name="" id="" placeholder="Введите e-mail">
+      <input type="number" name="" id="" placeholder="Введите телефон">
+      <textarea name="" id="" cols="30" rows="3" placeholder="Комментарий"></textarea>
+      <button>Отправить</button>
+  </div>
+</footer> -->
+
+  <script src="js/calculator.js"></script>
+  <script src="js/pair.js"></script>
+  <script src="js/simple_pair.js"></script>
+</body>
+</html>
